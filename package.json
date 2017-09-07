@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Lisa Gee",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "dotenv": "^4.0.0",
     "express": "^4.15.4",
     "pg": "^7.3.0",
     "pg-hstore": "^2.3.2",
-    "pg-promise": "^6.5.1",
     "sequelize": "^4.8.0"
   }
 }
