@@ -1,6 +1,10 @@
 const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('postgres://postgres:test@localhost:5433/postgres');
+//For local variable loading
+var dotenv = require('dotenv');
+dotenv.load();
+
+const sequelize = new Sequelize(process.env.POSTGRES_URL);
 
 sequelize
   .authenticate()
@@ -14,7 +18,7 @@ sequelize
   module.exports = sequelize;
 
 // var pgp = require('pg-promise')(/*options*/)
-// var db = pgp('postgres://postgres:test@127.0.0.1:5433/postgres')
+// var db = pgp(process.env.POSTGRES_URL)
 
 // db.one('SELECT $1 AS value', 123)
 //   .then(function (data) {
